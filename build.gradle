@@ -44,8 +44,8 @@ dependencies {
   testImplementation 'org.testcontainers:junit-jupiter'
   testImplementation 'org.testcontainers:mysql'
 }
-springBoot { 
-    executable = true 
+tasks.named("bootJar") {
+	launchScript()
 }
 tasks.named('test') {
   useJUnitPlatform()
